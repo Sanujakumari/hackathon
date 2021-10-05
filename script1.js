@@ -4,17 +4,14 @@ function foo(){
     let cc=document.getElementById("cname").value;
     console.log(cc);
     async function foo1(){
-        try{
+       
             let data=await fetch(`https://cataas.com/api/cats?tags=${cc}`);
             let result=await data.json();
             
             console.log(result);
             document.body.append(data);
         
-        }
-    catch(error ){
-        console.error();
-
+       
     }
 
     
@@ -45,7 +42,7 @@ function catimg(){
     let cc=document.getElementById("cname").value;
     console.log(cc);
     async function cat(){
-        try{
+        
 
        
     let data=await fetch(`https://cataas.com/cat${cc}`);
@@ -53,10 +50,7 @@ function catimg(){
     console.log(result);
     document.body.append(data);
 
-        }
-        catch (error) {
-            console.error(error);
-          }
+        
     
 
     
